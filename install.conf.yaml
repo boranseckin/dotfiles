@@ -13,3 +13,4 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [cp hyperzsh.zsh-theme ~/.oh-my-zsh/custom/themes/hyperzsh.zsh-theme]
