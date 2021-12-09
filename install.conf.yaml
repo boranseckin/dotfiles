@@ -12,4 +12,5 @@
     ~/.gitconfig: gitconfig 
 
 - shell:
-  - [cp hyperzsh.zsh-theme ~/.oh-my-zsh/custom/themes/hyperzsh.zsh-theme]
+  - [cp hyperzsh.zsh-theme ~/.oh-my-zsh/custom/themes/hyperzsh.zsh-theme, Copying ITerm theme]
+  - [vim +PlugUpdate +PlugClean! +qa, Installing and updating Vim plugins]
