@@ -10,16 +10,25 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
-Plug 'tpope/vim-fugitive'
-Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-sensible'
-Plug 'preservim/nerdcommenter'
-Plug 'vim-syntastic/syntastic'
+Plug 'tpope/vim-fugitive'
+Plug 'itchyny/lightline.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+" Plugin Options
+let g:lightline = {
+\  'colorscheme': 'wombat',
+\  'active': {
+\    'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']],
+\  },
+\  'component_function': {
+\    'gitbranch': 'FugitiveHead',
+\  },
+\}
 
 " Options
 set noshowmode
@@ -32,6 +41,12 @@ set listchars=trail:·
 set scrolloff=4
 set sidescrolloff=4
 set clipboard=unnamed
+set showcmd
 
 highlight SpecialKey ctermfg=grey
 highlight LineNr ctermfg=grey
+
+" Key Maps
+let mapleader=' '
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <Leader>g :Commits<CR>
