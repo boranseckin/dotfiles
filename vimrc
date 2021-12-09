@@ -10,6 +10,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
+Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -21,10 +22,16 @@ Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 " Options
-"set laststatus=2
 set noshowmode
-set shiftwidth=0
+set shiftwidth=2
 set tabstop=2
-"set wildmenu
 set mouse=a
-"set history=300
+set number
+set list
+set listchars=trail:·
+set scrolloff=4
+set sidescrolloff=4
+set clipboard=unnamed
+
+highlight SpecialKey ctermfg=grey
+highlight LineNr ctermfg=grey
