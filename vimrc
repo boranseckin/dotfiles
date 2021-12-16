@@ -15,6 +15,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'scrooloose/syntastic'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -29,6 +31,14 @@ let g:lightline = {
 \    'gitbranch': 'FugitiveHead',
 \  },
 \}
+
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_typescript_checkers=['eslint']
+let g:syntastic_html_checkers=['eslint']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 2
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Options
 set noshowmode
