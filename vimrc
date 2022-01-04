@@ -59,4 +59,6 @@ highlight LineNr ctermfg=grey
 " Key Maps
 let mapleader=' '
 nnoremap <silent> <C-f> :GFiles<CR>
+nnoremap <silent> <C-b> :Buffers<CR>
 nnoremap <silent> <Leader>g :Commits<CR>
+
