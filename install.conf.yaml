@@ -9,7 +9,8 @@
 - link:
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
-    ~/.gitconfig: gitconfig 
+    ~/.gitconfig: gitconfig
+    ~/.config/karabiner/karabiner.json: karabiner.json
 
 - shell:
   - [cp hyperzsh.zsh-theme ~/.oh-my-zsh/custom/themes/hyperzsh.zsh-theme, Copying ITerm theme]
