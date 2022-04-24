@@ -55,6 +55,9 @@ set showcmd
 
 highlight SpecialKey ctermfg=grey
 highlight LineNr ctermfg=grey
+highlight CocErrorSign ctermfg=black
+highlight CocInfoSign ctermfg=black
+highlight CocWarningSign ctermfg=black
 
 " Key Maps
 let mapleader=' '
