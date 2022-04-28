@@ -53,11 +53,11 @@ set sidescrolloff=4
 set clipboard=unnamed
 set showcmd
 
+" Highlights (xterm colors)
 highlight SpecialKey ctermfg=grey
 highlight LineNr ctermfg=grey
-highlight CocErrorSign ctermfg=black
-highlight CocInfoSign ctermfg=black
-highlight CocWarningSign ctermfg=black
+highlight Pmenu ctermfg=0 ctermbg=8
+highlight CocErrorSign ctermfg=196
 
 " Key Maps
 let mapleader=' '
