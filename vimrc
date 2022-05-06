@@ -47,7 +47,7 @@ set tabstop=2
 set mouse=a
 set number
 set list
-set listchars=trail:·
+set listchars=trail:·,tab:\ \ 
 set scrolloff=4
 set sidescrolloff=4
 set clipboard=unnamed
