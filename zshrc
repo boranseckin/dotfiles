@@ -36,6 +36,8 @@ alias myip="curl icanhazip.com";
 alias myip4="curl -4 icanhazip.com";
 alias myip6="curl -6 icanhazip.com";
 alias cpv="rsync -ahP"
+alias locload="launchctl load /Users/boran/Developer/wifiUpdater/com.boranseckin.wifiUpdater.plist"
+alias locunload="launchctl unload /Users/boran/Developer/wifiUpdater/com.boranseckin.wifiUpdater.plist"
 
 # History
 export HISTSIZE=32768;
