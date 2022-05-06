@@ -18,5 +18,9 @@
 [init]
 	defaultBranch = main
 [alias]
-    gpg = log --show-signature
-    tree = log --graph --decorate --abbrev-commit --branches --tags --remotes --date=short --pretty=format:'%C(yellow)%h%Creset-%C(cyan)(%ai%x08%x08%x08%x08%x08%x08) %ar%Creset%C(bold green)%d%Creset %s %Creset %C(cyan)[%cn]%Creset'
+  gpg = log --show-signature
+  tree = log --graph --decorate --abbrev-commit --branches --tags --remotes --date=short --pretty=format:'%C(yellow)%h%Creset-%C(cyan)(%ai%x08%x08%x08%x08%x08%x08) %ar%Creset%C(bold green)%d%Creset %s %Creset %C(cyan)[%cn]%Creset'
+
+[includeIf "gitdir:~/aposto/"]
+	path = ~/aposto/.gitconfig_aposto
+
