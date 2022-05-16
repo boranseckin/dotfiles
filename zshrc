@@ -36,6 +36,7 @@ alias myip="curl icanhazip.com";
 alias myip4="curl -4 icanhazip.com";
 alias myip6="curl -6 icanhazip.com";
 alias cpv="rsync -ahP"
+alias changes="git logs | awk '/^ [0-9]/ { f += \$1; i += \$4; d += \$6 } END { printf(\"%d files changed, %d insertions(+), %d deletions(-)\n\", f, i, d) }'"
 alias locload="launchctl load /Users/boran/Developer/wifiUpdater/com.boranseckin.wifiUpdater.plist"
 alias locunload="launchctl unload /Users/boran/Developer/wifiUpdater/com.boranseckin.wifiUpdater.plist"
 
