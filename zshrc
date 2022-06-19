@@ -20,6 +20,7 @@ plugins=(
   colored-man-pages
   kubectl
   rsync
+  rust
   z
 )
 
