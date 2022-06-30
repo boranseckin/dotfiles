@@ -9,6 +9,8 @@
 	gpgSign = true
 [gpg]
 	program = /opt/homebrew/bin/gpg
+[core]
+	excludesfile = ~/dotfiles/gitignore.global
 
 [pull]
 	rebase = true
