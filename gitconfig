@@ -11,6 +11,8 @@
 	program = /opt/homebrew/bin/gpg
 [core]
 	excludesfile = ~/dotfiles/gitignore.global
+[safe]
+	directory = ~/.vim/plugged
 
 [pull]
 	rebase = true
