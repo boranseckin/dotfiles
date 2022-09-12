@@ -5,22 +5,28 @@
 
 [commit]
 	gpgsign = true
+
 [tag]
 	gpgSign = true
+
 [gpg]
 	program = /opt/homebrew/bin/gpg
+
 [core]
 	excludesfile = ~/dotfiles/gitignore.global
+
 [safe]
 	directory = ~/.vim/plugged
 
 [pull]
 	rebase = true
+
 [rebase]
 	autostash = true
 
 [init]
 	defaultBranch = main
+
 [alias]
 	logs = log --shortstat
   gpg = log --show-signature
@@ -34,3 +40,4 @@
 
 [advice]
 	addIgnoredFile = false
+

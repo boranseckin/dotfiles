@@ -27,7 +27,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-alias cydia="cd /Users/boran/Cydia";
 alias zshrc="vim ~/.zshrc";
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'";
 alias src="source ~/.zshrc";
@@ -77,3 +76,4 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
