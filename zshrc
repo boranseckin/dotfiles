@@ -7,7 +7,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(
   git
   git-flow
-  nvm
   brew
   extract
   npm
@@ -18,7 +17,6 @@ plugins=(
   docker
   docker-compose
   colored-man-pages
-  kubectl
   rsync
   rust
   z
@@ -37,8 +35,6 @@ alias myip4="curl -4 icanhazip.com";
 alias myip6="curl -6 icanhazip.com";
 alias cpv="rsync -ahP"
 alias changes="git logs | awk '/^ [0-9]/ { f += \$1; i += \$4; d += \$6 } END { printf(\"%d files changed, %d insertions(+), %d deletions(-)\n\", f, i, d) }'"
-alias locload="launchctl load /Users/boran/Developer/wifiUpdater/com.boranseckin.wifiUpdater.plist"
-alias locunload="launchctl unload /Users/boran/Developer/wifiUpdater/com.boranseckin.wifiUpdater.plist"
 
 # History
 export HISTSIZE=32768;
@@ -71,9 +67,4 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
