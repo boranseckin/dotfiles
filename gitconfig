@@ -13,7 +13,7 @@
 	program = /opt/homebrew/bin/gpg
 
 [core]
-	excludesfile = ~/dotfiles/gitignore.global
+	excludesfile = ~/.dotfiles/gitignore.global
 
 [safe]
 	directory = ~/.vim/plugged
