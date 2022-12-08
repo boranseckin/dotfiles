@@ -65,6 +65,9 @@ fi
 
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
+# Rust
+. "$HOME/.cargo/env"
+
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

@@ -35,8 +35,8 @@
 [includeIf "gitdir:~/aposto/"]
 	path = ~/aposto/.gitconfig_aposto
 
-[includeIf "gitdir:~/OneDrive - McMaster University/"]
-	path = ~/OneDrive - McMaster University/.gitconfig_mcmaster
+[includeIf "gitdir:~/OneDrive/"]
+	path = ~/OneDrive/.gitconfig_mcmaster
 
 [advice]
 	addIgnoredFile = false
