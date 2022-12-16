@@ -11,6 +11,7 @@
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
     ~/.config/karabiner/karabiner.json: karabiner.json
+    ~/.config/nvim: nvim
 
 - shell:
   - [cp hyperzsh.zsh-theme ~/.oh-my-zsh/custom/themes/hyperzsh.zsh-theme, Copying ZSH theme]
