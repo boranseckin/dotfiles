@@ -9,10 +9,10 @@ lsp.ensure_installed({
   'rust_analyzer',
 })
 
+lsp.setup()
+
 vim.diagnostic.config({
   virtual_text = true,
-  globals = { "vim" },
+  globals = { 'vim' },
 })
-
-lsp.setup()
 
