@@ -1,5 +1,4 @@
 vim.opt.nu = true
-vim.opt.relativenumber = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -22,6 +21,9 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
+
+vim.opt.list = true
+vim.opt.listchars = "trail:·,tab:  "
 
 vim.g.mapleader = " "
