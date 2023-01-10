@@ -40,6 +40,8 @@ return require('packer').startup(function(use)
 
   use "akinsho/toggleterm.nvim"
 
+  use "numToStr/Comment.nvim"
+
   use "EdenEast/nightfox.nvim"
 end)
 
