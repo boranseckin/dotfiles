@@ -42,6 +42,8 @@ return require('packer').startup(function(use)
 
   use "numToStr/Comment.nvim"
 
+  use "Pocco81/true-zen.nvim"
+
   use "EdenEast/nightfox.nvim"
 end)
 
