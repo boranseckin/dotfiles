@@ -1,13 +1,18 @@
 require('true-zen').setup({
   modes = {
     ataraxis = {
-     padding = {
+      padding = {
         left = 35,
-				right = 35,
-				top = 0,
-				bottom = 0,
-			},
-    }
+        right = 35,
+        top = 0,
+        bottom = 0,
+      },
+    },
+    minimalist = {
+      options = {
+        number = true,
+      },
+    },
   }
 })
 
