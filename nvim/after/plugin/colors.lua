@@ -8,4 +8,3 @@ function FixColors(color)
 end
 
 FixColors()
-
