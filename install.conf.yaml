@@ -7,7 +7,6 @@
 - clean: ['~']
 
 - link:
-    ~/.vimrc: vimrc
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
     ~/.config/karabiner/karabiner.json: karabiner.json
@@ -15,4 +14,4 @@
 
 - shell:
   - [cp hyperzsh.zsh-theme ~/.oh-my-zsh/custom/themes/hyperzsh.zsh-theme, Copying ZSH theme]
-  - [vim +PlugUpdate +PlugClean! +qa, Installing and updating Vim plugins]
+  - [nvim +PackerSync! +PackerClean! +qa, Installing and updating nvim plugins]
