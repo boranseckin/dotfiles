@@ -139,11 +139,6 @@ _G.packer_plugins = {
     path = "/Users/boran/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["nightfox.nvim"] = {
-    loaded = true,
-    path = "/Users/boran/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
-    url = "https://github.com/EdenEast/nightfox.nvim"
-  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/boran/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -169,6 +164,11 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/Users/boran/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["onedarkpro.nvim"] = {
+    loaded = true,
+    path = "/Users/boran/.local/share/nvim/site/pack/packer/start/onedarkpro.nvim",
+    url = "https://github.com/olimorris/onedarkpro.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,

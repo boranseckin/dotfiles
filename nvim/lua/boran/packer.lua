@@ -51,5 +51,5 @@ return require('packer').startup(function(use)
 
   use "Pocco81/true-zen.nvim"
 
-  use "EdenEast/nightfox.nvim"
+  use "olimorris/onedarkpro.nvim"
 end)

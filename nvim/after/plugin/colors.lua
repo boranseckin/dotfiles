@@ -1,10 +1,10 @@
-function FixColors(color)
-  color = color or "duskfox"
-  vim.cmd.colorscheme(color)
+require("onedarkpro").setup({
+  colors = {
+    bg = "#1b1e24",
+    red = "#c1505b",
+    yellow = "#e3b766"
+  }
+})
 
-  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-  vim.api.nvim_set_hl(0, "Whitespace", { fg = "grey" })
-end
+vim.cmd.colorscheme("onedark")
 
-FixColors()
