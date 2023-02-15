@@ -51,6 +51,8 @@ return require('packer').startup(function(use)
 
   use "Pocco81/true-zen.nvim"
 
+  use "lukas-reineke/indent-blankline.nvim"
+
   use "github/copilot.vim"
 
   use "olimorris/onedarkpro.nvim"
