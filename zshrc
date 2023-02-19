@@ -43,6 +43,9 @@ export HISTFILESIZE=$HISTSIZE;
 export HISTCONTROL=ignoredups;
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
 
+# Editor
+export EDITOR="nvim"
+
 # GPG
 export GPG_TTY=$(tty)
 
