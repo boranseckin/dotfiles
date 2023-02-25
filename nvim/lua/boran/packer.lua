@@ -43,8 +43,6 @@ return require('packer').startup(function(use)
 
   use "Pocco81/auto-save.nvim"
 
-  use "akinsho/toggleterm.nvim"
-
   use "numToStr/Comment.nvim"
 
   use "windwp/nvim-autopairs"
