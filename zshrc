@@ -6,17 +6,11 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(
   git
-  git-flow
-  brew
   extract
-  npm
-  nvm
-  yarn
   macos
-  sudo
+  gitignore
+  thefuck
   docker
-  docker-compose
-  colored-man-pages
   rsync
   rust
   z
