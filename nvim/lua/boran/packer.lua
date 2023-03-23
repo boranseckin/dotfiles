@@ -14,6 +14,8 @@ return require('packer').startup(function(use)
     run = ':TSUpdate'
   }
 
+  use 'nvim-treesitter/nvim-treesitter-context'
+
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
