@@ -204,6 +204,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/boran/.local/share/nvim/site/pack/packer/start/true-zen.nvim",
     url = "https://github.com/Pocco81/true-zen.nvim"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/Users/boran/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   }
 }
 
