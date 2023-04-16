@@ -38,6 +38,9 @@ return require('packer').startup(function(use)
     }
   }
 
+  use 'mfussenegger/nvim-dap';
+  use 'simrat39/rust-tools.nvim'
+
   use 'tpope/vim-fugitive';
 
   use {
