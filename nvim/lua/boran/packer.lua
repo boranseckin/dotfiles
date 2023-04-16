@@ -48,6 +48,8 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
   }
 
+  use { "folke/which-key.nvim" }
+
   use "Pocco81/auto-save.nvim"
 
   use "numToStr/Comment.nvim"
