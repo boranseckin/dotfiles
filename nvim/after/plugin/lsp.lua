@@ -8,6 +8,7 @@ lsp.ensure_installed({
   'rust_analyzer',
 })
 
+-- This is handled by rust-tools
 lsp.skip_server_setup({'rust_analyzer'})
 
 lsp.set_sign_icons({
@@ -32,6 +33,7 @@ require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
 
+-- Enable trailing error messages
 vim.diagnostic.config({
   virtual_text = true,
 })
@@ -60,6 +62,7 @@ cmp.setup({
 -- Setup rust-tools
 local rust_tools = require('rust-tools')
 
+-- Get codelldb from Mason
 local path = vim.fn.glob(vim.fn.stdpath("data") .. "/mason/packages/codelldb/extension/")
 local codelldb_path = path .. "adapter/codelldb"
 local liblldb_path = path .. "lldb/lib/liblldb.dylib"

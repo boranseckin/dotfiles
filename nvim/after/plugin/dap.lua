@@ -1,5 +1,6 @@
 local dap = require('dap');
 
+-- Setup the debugger for rust
 -- https://github.com/abzcoding/lvim/blob/155160da96b545a6c603f89ca6bd290845af8f8f/lua/user/dap.lua#L42
 vim.g.dap_virtual_text = true
 dap.configurations.rust = {
