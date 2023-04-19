@@ -49,7 +49,7 @@ cmp.setup({
     -- Ctrl+Space to trigger completion menu
     ['<C-Space>'] = cmp.mapping.complete(),
 
-    -- Ctrl+Y to accept Copilot suggestion
+    -- Ctrl+y to accept Copilot suggestion
     ['<C-y>'] = cmp.mapping(function(fallback)
       vim.api.nvim_feedkeys(vim.fn['copilot#Accept'](vim.api.nvim_replace_termcodes('<Tab>', true, true, true)), 'n', true)
     end),
