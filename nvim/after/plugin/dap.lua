@@ -1,20 +1,6 @@
 local dap = require('dap');
-local rt = require("rust-tools")
-
-local path = vim.fn.glob(vim.fn.stdpath("data") .. "/mason/packages/codelldb/extension/")
-local codelldb_path = path .. "adapter/codelldb"
-local liblldb_path = path .. "lldb/lib/liblldb.dylib"
-
-local opts = {
-  dap = {
-    adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path),
-  }
-}
-
-rt.setup(opts);
 
 -- https://github.com/abzcoding/lvim/blob/155160da96b545a6c603f89ca6bd290845af8f8f/lua/user/dap.lua#L42
-
 vim.g.dap_virtual_text = true
 dap.configurations.rust = {
   {

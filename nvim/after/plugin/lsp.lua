@@ -1,5 +1,4 @@
 local lsp = require('lsp-zero')
-local cmp = require('cmp')
 
 lsp.preset('recommended')
 
@@ -9,37 +8,27 @@ lsp.ensure_installed({
   'rust_analyzer',
 })
 
-lsp.set_preferences({
-  suggest_lsp_servers = false,
-  sign_icons = {
-    error = 'E',
-    warn = 'W',
-    hint = 'H',
-    info = 'I'
-  },
-  set_lsp_keymaps = { omit = { '<F2>', '<F4>' } }
+lsp.skip_server_setup({'rust_analyzer'})
+
+lsp.set_sign_icons({
+  error = '',
+  warn = '',
+  hint = '',
+  info = '',
 })
 
 lsp.on_attach(function(client, bufnr)
-  local opts = {buffer = bufnr}
-  local bind = vim.keymap.set
+  lsp.default_keymaps({
+    buffer = bufnr,
+    omit = { '<F2>', '<F4>' },
+  })
 
-  bind('n', 'gr', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
-  bind('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+  vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr })
+  vim.keymap.set('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr })
 end)
 
-lsp.setup_nvim_cmp({
-  mapping = lsp.defaults.cmp_mappings({
-    ['<C-y>'] = cmp.mapping(function(fallback)
-      vim.api.nvim_feedkeys(vim.fn['copilot#Accept'](vim.api.nvim_replace_termcodes('<Tab>', true, true, true)), 'n', true)
-    end)
-  }),
-  experimental = {
-    ghost_text = false
-  }
-})
-
-lsp.nvim_workspace()
+-- Setup lua language server
+require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
 
@@ -47,3 +36,41 @@ vim.diagnostic.config({
   virtual_text = true,
 })
 
+-- Setup nvim-cmp
+local cmp = require('cmp')
+
+cmp.setup({
+  mapping = {
+    -- `Enter` key to confirm completion
+    ['<CR>'] = cmp.mapping.confirm({select = false}),
+
+    -- Ctrl+Space to trigger completion menu
+    ['<C-Space>'] = cmp.mapping.complete(),
+
+    -- Ctrl+Y to accept Copilot suggestion
+    ['<C-y>'] = cmp.mapping(function(fallback)
+      vim.api.nvim_feedkeys(vim.fn['copilot#Accept'](vim.api.nvim_replace_termcodes('<Tab>', true, true, true)), 'n', true)
+    end),
+  },
+  experimental = {
+    ghost_text = false,
+  },
+})
+
+-- Setup rust-tools
+local rust_tools = require('rust-tools')
+
+local path = vim.fn.glob(vim.fn.stdpath("data") .. "/mason/packages/codelldb/extension/")
+local codelldb_path = path .. "adapter/codelldb"
+local liblldb_path = path .. "lldb/lib/liblldb.dylib"
+
+rust_tools.setup({
+  dap = {
+    adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path),
+  },
+  tools = {
+    inlay_hints = {
+      auto = false,
+    },
+  },
+})
