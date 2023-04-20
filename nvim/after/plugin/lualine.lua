@@ -1,10 +1,11 @@
 require('lualine').setup({
   options = {
+    icons_enabled = true,
     theme = 'material',
   },
   extensions = {
     "fzf",
-    "toggleterm"
+    "toggleterm",
   },
   sections = {
     lualine_a = { 'mode' },
@@ -14,7 +15,7 @@ require('lualine').setup({
         'filename',
         file_status = true,
         newfile_status = true,
-        path = 1
+        path = 1,
       },
       {
         'diagnostics',
@@ -25,5 +26,4 @@ require('lualine').setup({
     lualine_y = { 'progress' },
     lualine_z = { 'location' },
   },
-})
-
+});

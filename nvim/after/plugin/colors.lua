@@ -4,7 +4,6 @@ require("onedarkpro").setup({
     red = "#c1505b",
     yellow = "#e3b766"
   }
-})
+});
 
-vim.cmd.colorscheme("onedark")
-
+vim.cmd.colorscheme("onedark");

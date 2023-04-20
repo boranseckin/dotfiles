@@ -1,20 +1,23 @@
-vim.cmd [[packadd packer.nvim]]
+vim.cmd [[packadd packer.nvim]];
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+  use 'wbthomason/packer.nvim';
+
+  -- Native FZF support for Telescope
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' };
 
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+    requires = { { 'nvim-lua/plenary.nvim' } },
+  };
 
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
+    run = ':TSUpdate',
   }
 
-  use 'nvim-treesitter/nvim-treesitter-context'
+  use 'nvim-treesitter/nvim-treesitter-context';
 
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -25,7 +28,7 @@ return require('packer').startup(function(use)
       {
         'williamboman/mason.nvim',
         run = function()
-          pcall(vim.cmd, 'MasonUpdate')
+          pcall(vim.cmd, 'MasonUpdate');
         end,
       },
       {'williamboman/mason-lspconfig.nvim'},
@@ -39,29 +42,29 @@ return require('packer').startup(function(use)
       -- Snippets
       {'L3MON4D3/LuaSnip'},
     }
-  }
+  };
 
   use 'mfussenegger/nvim-dap';
-  use 'simrat39/rust-tools.nvim'
+  use 'simrat39/rust-tools.nvim';
 
   use 'tpope/vim-fugitive';
 
+  use 'nvim-tree/nvim-web-devicons';
+
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-  }
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+  };
 
-  use "Pocco81/auto-save.nvim"
+  use "Pocco81/auto-save.nvim";
 
-  use "numToStr/Comment.nvim"
+  use "numToStr/Comment.nvim";
 
-  use "windwp/nvim-autopairs"
+  use "windwp/nvim-autopairs";
 
-  use "Pocco81/true-zen.nvim"
+  use "lukas-reineke/indent-blankline.nvim";
 
-  use "lukas-reineke/indent-blankline.nvim"
+  use "github/copilot.vim";
 
-  use "github/copilot.vim"
-
-  use "olimorris/onedarkpro.nvim"
-end)
+  use "olimorris/onedarkpro.nvim";
+end);
