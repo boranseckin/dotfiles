@@ -21,7 +21,7 @@ lsp.set_sign_icons({
 lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({
     buffer = bufnr,
-    omit = { '<F2>', '<F3>', '<F4>' },
+    omit = { '<F2>', '<F3>', '<F4>', '<C-y>' },
   });
 
   vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr });
@@ -49,15 +49,21 @@ cmp.setup({
     -- Ctrl+Space to trigger completion menu
     ['<C-Space>'] = cmp.mapping.complete(),
 
-    -- Ctrl+y to accept Copilot suggestion
-    ['<C-y>'] = cmp.mapping(function(fallback)
-      vim.api.nvim_feedkeys(vim.fn['copilot#Accept'](vim.api.nvim_replace_termcodes('<Tab>', true, true, true)), 'n', true);
-    end),
+    -- Disable `C-y` because it's mapped to copilot
+    ['<C-y>'] = cmp.mapping.disable,
   },
   experimental = {
     ghost_text = false,
   },
 });
+
+cmp.event:on("menu_opened", function()
+  vim.b.copilot_suggestion_hidden = true
+end)
+
+cmp.event:on("menu_closed", function()
+  vim.b.copilot_suggestion_hidden = false
+end)
 
 -- Setup rust-tools
 local rust_tools = require('rust-tools');
