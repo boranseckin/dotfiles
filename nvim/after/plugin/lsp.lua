@@ -44,7 +44,7 @@ local cmp = require('cmp');
 cmp.setup({
   mapping = {
     -- `Enter` key to confirm completion
-    ['<CR>'] = cmp.mapping.confirm({select = false}),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
 
     -- Ctrl+Space to trigger completion menu
     ['<C-Space>'] = cmp.mapping.complete(),
@@ -64,6 +64,24 @@ end)
 cmp.event:on("menu_closed", function()
   vim.b.copilot_suggestion_hidden = false
 end)
+
+-- `:` cmdline setup
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({
+    { name = 'path' }
+  }, {
+    { name = 'cmdline' }
+  })
+})
+
+-- `/` cmdline setup
+cmp.setup.cmdline({ '/', '?' }, {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
+    { name = 'buffer' }
+  }
+})
 
 -- Setup rust-tools
 local rust_tools = require('rust-tools');
@@ -88,7 +106,7 @@ rust_tools.setup({
   },
   tools = {
     inlay_hints = {
-      auto = false,
+      -- auto = false,
     },
   },
 });
