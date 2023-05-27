@@ -65,16 +65,6 @@ cmp.event:on("menu_closed", function()
   vim.b.copilot_suggestion_hidden = false
 end)
 
--- `:` cmdline setup
-cmp.setup.cmdline(':', {
-  mapping = cmp.mapping.preset.cmdline(),
-  sources = cmp.config.sources({
-    { name = 'path' }
-  }, {
-    { name = 'cmdline' }
-  })
-})
-
 -- `/` cmdline setup
 cmp.setup.cmdline({ '/', '?' }, {
   mapping = cmp.mapping.preset.cmdline(),
