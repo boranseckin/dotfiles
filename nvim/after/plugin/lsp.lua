@@ -24,7 +24,7 @@ lsp.on_attach(function(client, bufnr)
     omit = { '<F2>', '<F3>', '<F4>', '<C-y>' },
   });
 
-  vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr });
+  vim.keymap.set('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr });
   vim.keymap.set('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr });
 end);
 
