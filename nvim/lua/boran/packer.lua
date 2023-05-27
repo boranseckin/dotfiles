@@ -64,6 +64,8 @@ return require('packer').startup(function(use)
 
   use "lukas-reineke/indent-blankline.nvim";
 
+  use "ahmedkhalf/project.nvim";
+
   use "zbirenbaum/copilot.lua";
 
   use "olimorris/onedarkpro.nvim";
