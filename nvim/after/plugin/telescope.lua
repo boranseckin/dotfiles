@@ -1,6 +1,13 @@
 local builtin = require('telescope.builtin');
 require('telescope').load_extension('fzf');
 
+require('telescope').setup({
+  pickers = {
+    find_files = { theme = "ivy" },
+    git_files = { theme = "ivy" },
+  },
+})
+
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {});
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {});
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {});
