@@ -1,10 +1,19 @@
 local builtin = require('telescope.builtin');
+local actions = require "telescope.actions"
+
 require('telescope').load_extension('fzf');
 
 require('telescope').setup({
   pickers = {
     find_files = { theme = "ivy" },
     git_files = { theme = "ivy" },
+    buffers = {
+      mappings = {
+        i = {
+          ["<c-d>"] = actions.delete_buffer + actions.move_to_top,
+        },
+      },
+    },
   },
 })
 
