@@ -10,7 +10,6 @@ plugins=(
   macos
   gitignore
   thefuck
-  docker
   rsync
   rust
   z
