@@ -8,6 +8,8 @@ end
 
 config.color_scheme = "OneDark (base16)"
 
+config.scrollback_lines = 60000
+
 config.hide_tab_bar_if_only_one_tab = true
 config.quick_select_patterns = {
   "(\\w+\\/?)+(\\.\\w+)?",
