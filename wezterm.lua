@@ -8,6 +8,9 @@ end
 
 config.color_scheme = "OneDark (base16)"
 
+config.font = wezterm.font 'Hack Nerd Font Mono'
+config.font_size = 13
+
 config.scrollback_lines = 60000
 
 config.hide_tab_bar_if_only_one_tab = true
