@@ -1,6 +1,7 @@
 vim.g.mapleader = " ";
 vim.keymap.set("n", "<leader>ee", vim.cmd.Ex);
 vim.keymap.set("n", "<leader>w", vim.cmd.w);
+vim.keymap.set("n", "<leader> ", ":bp<CR>")
 
 -- Escape insert mode
 vim.keymap.set("i", "jj", "<ESC>");
