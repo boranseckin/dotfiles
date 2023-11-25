@@ -14,7 +14,7 @@ lsp.skip_server_setup({'rust_analyzer'});
 lsp.set_sign_icons({
   error = '',
   warn = '',
-  hint = '',
+  hint = '',
   info = '',
 });
 
@@ -90,6 +90,7 @@ rust_tools.setup({
       ['rust-analyzer'] = {
         check = {
           command = 'clippy',
+          allTargets = false,
         },
       },
     },
