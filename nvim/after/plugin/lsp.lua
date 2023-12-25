@@ -18,7 +18,7 @@ lsp.set_sign_icons({
   info = '',
 });
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
   lsp.default_keymaps({
     buffer = bufnr,
     omit = { '<F2>', '<F3>', '<F4>', '<C-y>' },
