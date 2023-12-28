@@ -13,6 +13,8 @@
     ~/.config/nvim: nvim
     ~/.tmux.conf: tmux.conf
     ~/.wezterm.lua: wezterm.lua
+    ~/.yabairc: yabairc
+    ~/.skhdrc: skhdrc
 
 - shell:
   - [cp hyperzsh.zsh-theme ~/.oh-my-zsh/custom/themes/hyperzsh.zsh-theme, Copying ZSH theme]
