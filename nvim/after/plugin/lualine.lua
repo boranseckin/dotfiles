@@ -5,7 +5,6 @@ require('lualine').setup({
   },
   extensions = {
     "fzf",
-    "toggleterm",
   },
   sections = {
     lualine_a = { 'mode' },
