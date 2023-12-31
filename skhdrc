@@ -28,7 +28,9 @@ shift + alt - l : yabai -m query --windows --window west && yabai -m window --re
 alt - f : yabai -m window --toggle float && yabai -m window --grid 6:6:1:1:4:4
 
 # fullscreen zoom
-alt + shift - f : yabai -m window --toggle zoom-fullscreen
+alt + shift - f : yabai -m query --windows --window | jq -e '."is-floating"' && \
+                  yabai -m window --toggle float || true && \
+                  yabai -m window --toggle zoom-fullscreen
 
 # Launch apps
 alt - i : app_id=$(yabai -m query --windows | jq '.[] | select(.app | contains("iTerm")) | .id') && \
