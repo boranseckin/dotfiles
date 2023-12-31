@@ -32,7 +32,7 @@ alt + shift - f : yabai -m window --toggle zoom-fullscreen
 
 # Launch apps
 alt - i : app_id=$(yabai -m query --windows | jq '.[] | select(.app | contains("iTerm")) | .id') && \
-           test -n "${app_id}" && yabai -m window --focus "${app_id}" || /Applications/iTerm.app/Contents/MacOS/iTerm2
+          test -n "${app_id}" && yabai -m window --focus "${app_id}" || open -a iTerm
 alt - o : app_id=$(yabai -m query --windows | jq '.[] | select(.app | contains("Arc")) | .id') && \
-           test -n "${app_id}" && yabai -m window --focus "${app_id}" || /Applications/Arc.app/Contents/MacOS/Arc
+          test -n "${app_id}" && yabai -m window --focus "${app_id}" || open -a Arc
 
