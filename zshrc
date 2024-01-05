@@ -15,6 +15,12 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+# History
+export HISTORY_IGNORE="l*|ll*|la*|ls*|eza*|cd|vim*|pwd|ps*|man*|kill*|exit|date|* --help";
+setopt HIST_IGNORE_ALL_DUPS;
+setopt HIST_FIND_NO_DUPS;
+setopt HIST_REDUCE_BLANKS;
+
 source $ZSH/oh-my-zsh.sh;
 
 # Aliases
@@ -30,12 +36,6 @@ alias cpv="rsync -ahP";
 alias changes="git logs | awk '/^ [0-9]/ { f += \$1; i += \$4; d += \$6 } END { printf(\"%d files changed, %d insertions(+), %d deletions(-)\n\", f, i, d) }'";
 alias diff="git diff --name-only --relative --diff-filter=d | xargs bat --diff";
 alias vim="nvim";
-
-# History
-export HISTSIZE=32768;
-export HISTFILESIZE=$HISTSIZE;
-export HISTCONTROL=ignoredups;
-export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
 
 # Editor
 export EDITOR="nvim";
