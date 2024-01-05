@@ -5,14 +5,13 @@ ZSH_DISABLE_COMPFIX="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(
-  git
   extract
   macos
-  gitignore
   thefuck
-  rsync
   rust
+  fzf
   z
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh;
@@ -65,10 +64,6 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1;
 
 # Rust
 . "$HOME/.cargo/env";
-
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh;
-export FZF_DEFAULT_OPTS="--preview 'bat --color=always --style=numbers --line-range=:500 {}'";
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
