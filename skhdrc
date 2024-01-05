@@ -25,7 +25,7 @@ shift + alt - l : yabai -m query --windows --window west && yabai -m window --re
                   yabai -m query --windows --window east && yabai -m window --resize right:20:0
 
 # highlight window
-alt - f : yabai -m window --toggle float && yabai -m window --grid 6:6:1:1:4:4
+alt - f : yabai -m window --toggle float && yabai -m window --grid 10:10:1:1:8:8
 
 # fullscreen zoom
 alt + shift - f : yabai -m query --windows --window | jq -e '."is-floating"' && \
@@ -37,4 +37,3 @@ alt - i : app_id=$(yabai -m query --windows | jq '.[] | select(.app | contains("
           test -n "${app_id}" && yabai -m window --focus "${app_id}" || open -a iTerm
 alt - o : app_id=$(yabai -m query --windows | jq '.[] | select(.app | contains("Arc")) | .id') && \
           test -n "${app_id}" && yabai -m window --focus "${app_id}" || open -a Arc
-
