@@ -40,6 +40,8 @@ return require('packer').startup(function(use)
     }
   };
 
+  use 'j-hui/fidget.nvim';
+
   use 'mfussenegger/nvim-dap';
   use 'simrat39/rust-tools.nvim';
 
