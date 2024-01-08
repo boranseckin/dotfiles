@@ -24,18 +24,24 @@ setopt HIST_REDUCE_BLANKS;
 source $ZSH/oh-my-zsh.sh;
 
 # Aliases
-alias zshrc="vim ~/.zshrc";
+alias l='eza -la';
+alias ll='eza -l';
+alias la='eza -lA';
+alias lt='eza -lT';
+alias lta='eza -lTA';
+
+alias vim="nvim";
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'";
 alias src="source ~/.zshrc";
 alias nl="npm list --depth=0 2>/dev/null";
 alias nlg="npm list -g --depth=0 2>/dev/null";
-alias myip="curl icanhazip.com";
-alias myip4="curl -4 icanhazip.com";
-alias myip6="curl -6 icanhazip.com";
 alias cpv="rsync -ahP";
 alias changes="git logs | awk '/^ [0-9]/ { f += \$1; i += \$4; d += \$6 } END { printf(\"%d files changed, %d insertions(+), %d deletions(-)\n\", f, i, d) }'";
 alias diff="git diff --name-only --relative --diff-filter=d | xargs bat --diff";
-alias vim="nvim";
+
+alias myip="curl icanhazip.com";
+alias myip4="curl -4 icanhazip.com";
+alias myip6="curl -6 icanhazip.com";
 
 # Editor
 export EDITOR="nvim";
