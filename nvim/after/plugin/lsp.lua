@@ -107,6 +107,9 @@ rust_tools.setup({
           command = 'clippy',
           allTargets = false,
         },
+        cargo = {
+          features = 'all',
+        }
       },
     },
   },
