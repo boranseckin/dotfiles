@@ -49,13 +49,13 @@ local cmp = require('cmp');
 cmp.setup({
   mapping = {
     -- `Enter` key to confirm completion
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<CR>'] = cmp.mapping.confirm({ select = false }),
 
     -- Ctrl+Space to trigger completion menu
     ['<C-Space>'] = cmp.mapping.complete(),
 
     -- Disable `C-y` because it's mapped to copilot
-    ['<C-y>'] = cmp.mapping.disable,
+    ['<C-y>'] = cmp.config.disable,
   },
   experimental = {
     ghost_text = false,
