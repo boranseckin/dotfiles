@@ -24,6 +24,9 @@
 [rebase]
 	autostash = true
 
+[rerere]
+	enabled = true
+
 [init]
 	defaultBranch = main
 
@@ -40,4 +43,3 @@
 
 [advice]
 	addIgnoredFile = false
-
