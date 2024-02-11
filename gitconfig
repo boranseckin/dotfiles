@@ -1,7 +1,7 @@
 [user]
 	name = Boran Seckin
 	email = boran@boranseckin.com
-	signingkey = 62EE0E1068C91D72 
+	signingkey = 62EE0E1068C91D72
 
 [commit]
 	gpgsign = true
@@ -14,6 +14,8 @@
 
 [core]
 	excludesfile = ~/.dotfiles/gitignore.global
+	untrackedcache = true
+	fsmonitor = true
 
 [safe]
 	directory = ~/.vim/plugged
