@@ -43,7 +43,11 @@ return require('packer').startup(function(use)
   use 'j-hui/fidget.nvim';
 
   use 'mfussenegger/nvim-dap';
-  use 'simrat39/rust-tools.nvim';
+
+  -- For rust-analyzer support
+  use 'mrcjkb/rustaceanvim';
+  -- For memory-view
+  use 'vxpm/ferris.nvim';
 
   use 'tpope/vim-fugitive';
 

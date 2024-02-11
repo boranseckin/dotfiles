@@ -13,7 +13,7 @@ lsp.ensure_installed({
   'rust_analyzer',
 });
 
--- This is handled by rust-tools
+-- This is handled by rustaceanvim
 lsp.skip_server_setup({'rust_analyzer'});
 
 lsp.set_sign_icons({
@@ -32,6 +32,12 @@ lsp.on_attach(function(_, bufnr)
   vim.keymap.set('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr });
   vim.keymap.set('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr });
 end);
+
+lsp.format_on_save({
+  servers = {
+    ["rust-analyzer"] = { "rust" },
+  },
+});
 
 -- Setup lua language server
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls());
@@ -88,34 +94,18 @@ cmp.setup.cmdline(':', {
   })
 })
 
--- Setup rust-tools
-local rust_tools = require('rust-tools');
+-- Use J to join lines using LSP if in a rust file
+vim.keymap.set('n', 'J', function()
+  if vim.bo.filetype == 'rust' then
+    vim.cmd.RustLsp('joinLines')
+  else
+    vim.cmd('normal! J')
+  end
+end);
 
--- Get codelldb from Mason
-local path = vim.fn.glob(vim.fn.stdpath("data") .. "/mason/packages/codelldb/extension/");
-local codelldb_path = path .. "adapter/codelldb";
-local liblldb_path = path .. "lldb/lib/liblldb.dylib";
-
-rust_tools.setup({
+vim.g.rustaceanvim = {
   dap = {
-    adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path),
+    -- Will be enabled by default on nvim >= 0.10
+    autoload_configurations = true,
   },
-  server = {
-    settings = {
-      ['rust-analyzer'] = {
-        check = {
-          command = 'clippy',
-          allTargets = false,
-        },
-        cargo = {
-          features = 'all',
-        }
-      },
-    },
-  },
-  tools = {
-    inlay_hints = {
-      -- auto = false,
-    },
-  },
-});
+};
