@@ -15,7 +15,6 @@
 [core]
 	excludesfile = ~/.dotfiles/gitignore.global
 	untrackedcache = true
-	fsmonitor = true
 
 [safe]
 	directory = ~/.vim/plugged
