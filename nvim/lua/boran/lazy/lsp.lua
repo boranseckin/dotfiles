@@ -12,6 +12,7 @@ return {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-cmdline",
       "L3MON4D3/LuaSnip",
+      "mrcjkb/rustaceanvim",
     },
     lazy = false,
     keys = {
@@ -110,8 +111,18 @@ return {
               capabilities = lsp_capabilities,
             })
           end,
+          ["rust_analyzer"] = function() end,
         },
       })
+
+      -- Use J to join lines using LSP if in a rust file
+      vim.keymap.set('n', 'J', function()
+        if vim.bo.filetype == 'rust' then
+          vim.cmd.RustLsp('joinLines')
+        else
+          vim.cmd('normal! J')
+        end
+      end);
 
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("FormatOnSave", { clear = true }),
