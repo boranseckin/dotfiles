@@ -30,6 +30,8 @@ alias la='eza -lA';
 alias lt='eza -lT';
 alias lta='eza -lTA';
 
+alias cat='bat';
+
 alias vim="nvim";
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'";
 alias src="source ~/.zshrc";
