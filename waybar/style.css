@@ -1,10 +1,10 @@
 @define-color fg #F5F5F5;
-@define-color bg #1F1F28;
-@define-color bordercolor #C8C093;
-@define-color highlight #D59C5C;
-@define-color disabled #A5A5A5;
-@define-color alert #E67E80;
-@define-color activegreen #26A65B;
+@define-color bg #282C34;
+@define-color bordercolor #E5C07B;
+@define-color highlight #61AFEF;
+@define-color disabled #ABB2BF;
+@define-color alert #E06C75;
+@define-color activegreen #98C379;
 
 * {
   min-height: 0;
