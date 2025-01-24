@@ -11,6 +11,7 @@ link() {
 link hyperzsh.zsh-theme $ZSH/custom/themes/hyperzsh.zsh-theme
 link zshrc $HOME/.zshrc
 link fontconfig $XDG_CONFIG_HOME/fontconfig
+link hypr $XDG_CONFIG_HOME/hypr
 link git $XDG_CONFIG_HOME/git
 link tmux $XDG_CONFIG_HOME/tmux
 link nvim $XDG_CONFIG_HOME/nvim
