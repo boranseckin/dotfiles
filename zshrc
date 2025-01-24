@@ -20,7 +20,6 @@ setopt HIST_IGNORE_ALL_DUPS;
 setopt HIST_FIND_NO_DUPS;
 setopt HIST_REDUCE_BLANKS;
 
-zstyle :omz:plugins:eza header no
 zstyle :omz:plugins:eza dirs-first yes
 zstyle :omz:plugins:ssh-agent lazy yes
 zstyle :omz:plugins:ssh-agent quiet yes

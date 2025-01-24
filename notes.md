@@ -5,8 +5,10 @@
 - eza
 - bat
 - fzf
+- jq
 - ripgrep
 - neovim
+- tldr
 
 # copy
 - hyperzsh
@@ -17,3 +19,9 @@
 # toolchain
 - rustup via pacman
 - python via pacman
+
+# fonts
+- noto-fonts
+- noto-fonts-cjk
+- noto-fonts-emoji
+- ttf-jetbrains-mono-nerd
