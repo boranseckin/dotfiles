@@ -10,6 +10,15 @@
 - neovim
 - tldr
 
+# apps
+- dolphin
+- grim
+- slurp
+- satty
+- copyq
+- imv
+- vlc
+
 # copy
 - hyperzsh
 - zshrc
