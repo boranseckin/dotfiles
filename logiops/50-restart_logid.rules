@@ -1,0 +1,2 @@
+# move to /etc/udev/rules.d/
+ACTION=="add", KERNEL=="hidraw9", RUN+="/usr/bin/systemctl --no-block restart logid.service"
