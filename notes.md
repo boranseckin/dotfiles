@@ -19,12 +19,7 @@
 - imv
 - vlc
 - logiops
-
-# copy
-- hyperzsh
-- zshrc
-- git
-- tmux
+- greetd
 
 # toolchain
 - rustup via pacman

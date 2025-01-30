@@ -44,7 +44,3 @@ alias diff="git diff --name-only --relative --diff-filter=d | xargs bat --diff";
 alias myip="curl icanhazip.com";
 alias myip4="curl -4 icanhazip.com";
 alias myip6="curl -6 icanhazip.com";
-
-if uwsm check may-start; then
-  exec uwsm start default
-fi
