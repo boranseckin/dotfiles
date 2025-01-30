@@ -18,6 +18,7 @@
 - copyq
 - imv
 - vlc
+- logiops
 
 # copy
 - hyperzsh

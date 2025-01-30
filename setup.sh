@@ -18,3 +18,4 @@ link ghostty $XDG_CONFIG_HOME/ghostty
 link git $XDG_CONFIG_HOME/git
 link tmux $XDG_CONFIG_HOME/tmux
 link nvim $XDG_CONFIG_HOME/nvim
+link logiops $XDG_CONFIG_HOME/logiops
