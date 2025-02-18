@@ -111,6 +111,7 @@ return {
           "jedi_language_server",
           "ruff",
           "biome",
+          "bashls",
         },
         automatic_installation = true,
         handlers = {

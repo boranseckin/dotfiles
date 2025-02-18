@@ -10,6 +10,7 @@ return {
           json = { "biome" },
           jsonc = { "biome" },
           markdown = { "markdownlint" },
+          sh = { "shfmt" },
         },
         default_format_opts = {
           lsp_format = "fallback",
