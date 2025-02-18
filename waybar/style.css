@@ -80,6 +80,7 @@ button:hover {
   color: @alert;
 }
 
+#custom-power,
 #clock,
 #bluetooth,
 #network,

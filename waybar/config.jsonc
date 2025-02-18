@@ -1,84 +1,83 @@
 // -*- mode: jsonc -*-
 {
-  "layer": "top",
-  "position": "top",
-  "height": 25,
-  "margin-left": 5,
-  "margin-right": 5,
-  "margin-top": 5,
-  "margin-bottom": 0,
-  "spacing": 1, // Gaps between modules (4px)
-  "reload_style_on_change": true,
+	"layer": "top",
+	"position": "top",
+	"height": 25,
+	"margin-left": 5,
+	"margin-right": 5,
+	"margin-top": 5,
+	"margin-bottom": 0,
+	"spacing": 1, // Gaps between modules (4px)
+	"reload_style_on_change": true,
 
-  // Choose the order of the modules
-  "modules-left": [
-    "hyprland/workspaces",
-    "hyprland/submap"
-  ],
+	// Choose the order of the modules
+	"modules-left": ["hyprland/workspaces", "hyprland/submap"],
 
-  "modules-center": [
-    "hyprland/window"
-  ],
+	"modules-center": ["hyprland/window"],
 
-  "modules-right": [
-    "tray",
-    "bluetooth",
-    "wireplumber",
-    "network",
-    "clock",
-    "custom/power"
-  ],
+	"modules-right": [
+		"tray",
+		"bluetooth",
+		"wireplumber",
+		"network",
+		"clock",
+		"custom/power"
+	],
 
-  // Modules configuration
-  "hyprland/workspaces": {
-    "all-outputs": true
-  },
+	// Modules configuration
+	"hyprland/workspaces": {
+		"all-outputs": true
+	},
 
-  "hyprland/window": {
-  },
+	"hyprland/window": {},
 
-  "hyprland/submap": {
-    "format": "<span style=\"italic\">{}</span>"
-  },
+	"hyprland/submap": {
+		"format": "<span style=\"italic\">{}</span>"
+	},
 
-  "tray": {
-    "icon-size": 18,
-    "spacing": 10,
-    "show-passive-items": true
-  },
+	"tray": {
+		"icon-size": 18,
+		"spacing": 10,
+		"show-passive-items": true
+	},
 
-  "bluetooth": {
-    "format": " {status}",
-    "format-connected": " {status}",
-    "format-connected-battery": " {status} {device_battery_percentage}%",
-    "tooltip-format": "{controller_alias}\t{controller_address}\n{num_connections} connected",
-    "tooltip-format-connected": "{controller_alias} - {controller_address}\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias} - {device_address}",
-    "tooltip-format-enumerate-connected-battery": "{device_alias} - {device_address} ({device_battery_percentage}%)"
-  },
+	"bluetooth": {
+		"format": " {status}",
+		"format-connected": " {status}",
+		"format-connected-battery": " {status} {device_battery_percentage}%",
+		"tooltip-format": "{controller_alias}\t{controller_address}\n{num_connections} connected",
+		"tooltip-format-connected": "{controller_alias} - {controller_address}\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias} - {device_address}",
+		"tooltip-format-enumerate-connected-battery": "{device_alias} - {device_address} ({device_battery_percentage}%)"
+	},
 
-  "network": {
-    "interval": 1,
-    "format-wifi": "  {essid} ({signalStrength}%)",
-    "format-ethernet": "{ipaddr}/{cidr}",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
-    "tooltip-format-wifi": "IP: {ipaddr}\nGW: {gwaddr}/{cidr}\nFreq: {frequency} GHz\nUp: {bandwidthUpBytes}\nDown: {bandwidthDownBytes}",
-    "tooltip-format": "IP: {ipaddr}\nGW: {gwaddr}/{cidr}\nUp: {bandwidthUpBytes}\nDown: {bandwidthDownBytes}",
-    "format-linked": "{ifname} (No IP)",
-    "format-disconnected": "󰀦 disconnected"
-  },
+	"network": {
+		"interval": 1,
+		"format-wifi": "  {essid} ({signalStrength}%)",
+		"format-ethernet": "{ipaddr}/{cidr}",
+		"format-alt": "{ifname}: {ipaddr}/{cidr}",
+		"tooltip-format-wifi": "IP: {ipaddr}\nGW: {gwaddr}/{cidr}\nFreq: {frequency} GHz\nUp: {bandwidthUpBytes}\nDown: {bandwidthDownBytes}",
+		"tooltip-format": "IP: {ipaddr}\nGW: {gwaddr}/{cidr}\nUp: {bandwidthUpBytes}\nDown: {bandwidthDownBytes}",
+		"format-linked": "{ifname} (No IP)",
+		"format-disconnected": "󰀦 disconnected"
+	},
 
-  "wireplumber": {
-    "format": "{icon}  {volume}%",
-    "format-muted": "󰖁  {volume}%",
-    "format-icons": ["", "", ""],
-    "tooltip-format": "{node_name}"
-  },
+	"wireplumber": {
+		"format": "{icon}  {volume}%",
+		"format-muted": "󰖁  {volume}%",
+		"format-icons": ["", "", ""],
+		"tooltip-format": "{node_name}"
+	},
 
-  "clock": {
-    "interval": 1,
-    "format": "  {:%a %b %d    %H:%M:%S}",
-    "format-alt": "{:%Y-%m-%d %H:%M:%S  }",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-  }
+	"clock": {
+		"interval": 1,
+		"format": "  {:%a %b %d    %H:%M:%S}",
+		"format-alt": "{:%Y-%m-%d %H:%M:%S  }",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+	},
+
+	"custom/power": {
+		"format": "⏻ ",
+		"on-click": "~/.config/hypr/scripts/power-controls.sh poweroff"
+	}
 }
