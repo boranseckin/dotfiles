@@ -31,6 +31,13 @@ reboot)
   close_apps
   systemctl reboot
   ;;
+logout)
+  close_apps
+  hyprctl dispatch exit
+  ;;
+close)
+  close_apps
+  ;;
 *)
   echo "usage: $0 <shutdown | reboot>"
   exit 1
