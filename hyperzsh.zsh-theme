@@ -4,7 +4,7 @@
 PROMPT='$(_user_host)$(_python_venv)%{$fg[blue]%}%c/ $(git_prompt_info)%{$reset_color%}$(git_prompt_status)➜ '
 
 function _user_host() {
-  if [[ $(who am i) =~ \([-a-zA-Z0-9\.]+\) ]]; then
+  if [[ $(whoami) =~ \([-a-zA-Z0-9\.]+\) ]]; then
     me="%n@%m"
   elif [[ logname != $USER ]]; then
     me="%n"
