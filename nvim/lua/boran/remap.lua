@@ -25,3 +25,9 @@ vim.keymap.set({ "n", "v", "i" }, "<Up>", "<Nop>");
 vim.keymap.set({ "n", "v", "i" }, "<Down>", "<Nop>");
 vim.keymap.set({ "n", "v", "i" }, "<Left>", "<Nop>");
 vim.keymap.set({ "n", "v", "i" }, "<Right>", "<Nop>");
+
+-- Resize windows
+vim.keymap.set({ "n", "v" }, "<M-k>", "<C-w>+");
+vim.keymap.set({ "n", "v" }, "<M-j>", "<C-w>-");
+vim.keymap.set({ "n", "v" }, "<M-h>", "<C-w><");
+vim.keymap.set({ "n", "v" }, "<M-l>", "<C-w>>");

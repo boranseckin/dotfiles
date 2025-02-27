@@ -104,7 +104,15 @@ return {
 
       require("mason").setup()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "rust_analyzer" },
+        ensure_installed = {
+          "lua_ls",
+          "rust_analyzer",
+          "clangd",
+          "jedi_language_server",
+          "ruff",
+          "biome",
+          "bashls",
+        },
         automatic_installation = true,
         handlers = {
           function(server)
@@ -124,18 +132,6 @@ return {
           vim.cmd('normal! J')
         end
       end);
-
-      vim.api.nvim_create_autocmd("LspAttach", {
-        group = vim.api.nvim_create_augroup("FormatOnSave", { clear = true }),
-        callback = function(args)
-          vim.api.nvim_create_autocmd("BufWritePre", {
-            buffer = args.buf,
-            callback = function()
-              vim.lsp.buf.format { async = false, id = args.data.client_id }
-            end,
-          })
-        end
-      })
     end,
   },
 }
