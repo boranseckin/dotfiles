@@ -1,6 +1,6 @@
 export ZSH="/Users/boran/.oh-my-zsh";
 
-ZSH_THEME="hyperzsh"
+ZSH_THEME="custom"
 ZSH_DISABLE_COMPFIX="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
