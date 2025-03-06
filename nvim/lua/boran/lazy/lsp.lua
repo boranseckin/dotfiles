@@ -105,13 +105,17 @@ return {
       require("mason").setup()
       require("mason-lspconfig").setup({
         ensure_installed = {
-          "lua_ls",
-          "rust_analyzer",
-          "clangd",
-          "jedi_language_server",
-          "ruff",
-          "biome",
-          "bashls",
+          "lua_ls",               -- lua lsp
+          "rust_analyzer",        -- rust lsp
+          "clangd",               -- c lsp
+          "jedi_language_server", -- python lsp
+          "ruff",                 -- python formatter
+          "biome",                -- js lsp
+          "bashls",               -- bash lsp
+          -- "clang-format",         -- c formatter
+          -- "codelldb",             -- lldb debugger
+          -- "shfmt",                -- bash formatter
+          -- "markdownlint"          -- markdown formatter
         },
         automatic_installation = true,
         handlers = {
