@@ -1,4 +1,12 @@
 #!/bin/bash
+set -e
+
+function grub() {
+  SELECTION=$(cat /boot/grub/grub.cfg | grep "^menuentry" | awk -F\' '{print $2}' | wofi --dmenu --prompt grub --sort-order alphabetical)
+  notify-send "power controls" "$SELECTION is selected for next boot"
+  sudo grub-reboot "$SELECTION"
+  sleep 2
+}
 
 function close_apps() {
   notify-send "power controls" "closing applications"
@@ -17,7 +25,7 @@ function close_apps() {
   if [ "$COUNT" -eq "0" ]; then
     notify-send "power controls" "closed applications"
   else
-    notify-send "power controls" "some apps didn't close, not shutting down."
+    notify-send "power controls" "some apps didn't close, not shutting down"
     exit 1
   fi
 }
@@ -35,11 +43,16 @@ logout)
   close_apps
   hyprctl dispatch exit
   ;;
+grub)
+  grub
+  close_apps
+  systemctl reboot
+  ;;
 close)
   close_apps
   ;;
 *)
-  echo "usage: $0 <shutdown | reboot>"
+  echo "usage: $0 <poweroff | reboot | logout | grub | close>"
   exit 1
   ;;
 esac
