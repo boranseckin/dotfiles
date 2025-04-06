@@ -20,12 +20,6 @@ vim.keymap.set("v", "<S-Down>", ":m '>+1<CR>gv=gv");
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y');
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p');
 
--- Unbind arrow keys
-vim.keymap.set({ "n", "v", "i" }, "<Up>", "<Nop>");
-vim.keymap.set({ "n", "v", "i" }, "<Down>", "<Nop>");
-vim.keymap.set({ "n", "v", "i" }, "<Left>", "<Nop>");
-vim.keymap.set({ "n", "v", "i" }, "<Right>", "<Nop>");
-
 -- Resize windows
 vim.keymap.set({ "n", "v" }, "<M-k>", "<C-w>+");
 vim.keymap.set({ "n", "v" }, "<M-j>", "<C-w>-");
