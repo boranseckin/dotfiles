@@ -15,6 +15,7 @@ link hypr $XDG_CONFIG_HOME/hypr
 link waybar $XDG_CONFIG_HOME/waybar
 link wofi $XDG_CONFIG_HOME/wofi
 link ghostty $XDG_CONFIG_HOME/ghostty
+link kitty $XDG_CONFIG_HOME/kitty
 link git $XDG_CONFIG_HOME/git
 link tmux $XDG_CONFIG_HOME/tmux
 link nvim $XDG_CONFIG_HOME/nvim
