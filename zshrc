@@ -11,7 +11,6 @@ plugins=(
   thefuck
   rust
   fzf
-  z
   zsh-syntax-highlighting
 )
 
@@ -22,6 +21,11 @@ setopt HIST_FIND_NO_DUPS;
 setopt HIST_REDUCE_BLANKS;
 
 source $ZSH/oh-my-zsh.sh;
+
+eval "$(zoxide init zsh)"
+
+# Editor
+export EDITOR="nvim";
 
 # Aliases
 alias l='eza -la';
