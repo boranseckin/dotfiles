@@ -11,7 +11,6 @@ plugins=(
   rust
   eza
   fzf
-  z
 )
 
 # History
@@ -26,6 +25,8 @@ zstyle :omz:plugins:ssh-agent quiet yes
 
 source $ZSH/oh-my-zsh.sh;
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+eval "$(zoxide init zsh)"
 
 # Editor
 export EDITOR="nvim";
