@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+function select_action() {
+  ACTION=$(printf "poweroff\nreboot\nlogout\nclose apps" | wofi --dmenu --prompt power)
+}
+
 function grub() {
   SELECTION=$(cat /boot/grub/grub.cfg | grep "^menuentry" | awk -F\' '{print $2}' | wofi --dmenu --prompt grub --sort-order alphabetical)
   notify-send "power controls" "$SELECTION is selected for next boot"
@@ -30,7 +34,13 @@ function close_apps() {
   fi
 }
 
-case $1 in
+if [ -z "$1" ]; then
+  select_action
+else
+  ACTION="$1"
+fi
+
+case "$ACTION" in
 poweroff)
   close_apps
   systemctl poweroff
