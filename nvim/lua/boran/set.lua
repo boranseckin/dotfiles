@@ -12,6 +12,7 @@ vim.opt.expandtab = true;
 
 vim.opt.smartindent = true;
 
+vim.opt.textwidth = 100;
 vim.opt.wrap = false;
 
 vim.opt.hlsearch = false;
