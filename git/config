@@ -1,6 +1,7 @@
 [user]
 	name = Boran Seckin
 	email = boran@boranseckin.com
+  identityFile = ~/.ssh/id_ed25519
 
 [init]
 	defaultBranch = main
