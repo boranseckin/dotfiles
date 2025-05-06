@@ -54,7 +54,7 @@
 	"network": {
 		"interval": 1,
 		"format-wifi": "  {essid} ({signalStrength}%)",
-		"format-ethernet": "{ipaddr}/{cidr}",
+		"format-ethernet": "󰈀 {ifname}",
 		"format-alt": "{ifname}: {ipaddr}/{cidr}",
 		"tooltip-format-wifi": "IP: {ipaddr}\nGW: {gwaddr}/{cidr}\nFreq: {frequency} GHz\nUp: {bandwidthUpBytes}\nDown: {bandwidthDownBytes}",
 		"tooltip-format": "IP: {ipaddr}\nGW: {gwaddr}/{cidr}\nUp: {bandwidthUpBytes}\nDown: {bandwidthDownBytes}",
