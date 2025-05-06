@@ -44,7 +44,7 @@
 	"bluetooth": {
 		"format": " {status}",
 		"format-connected": " {status}",
-		"format-connected-battery": " {status} {device_battery_percentage}%",
+		"format-connected-battery": " {device_battery_percentage}%",
 		"tooltip-format": "{controller_alias}\t{controller_address}\n{num_connections} connected",
 		"tooltip-format-connected": "{controller_alias} - {controller_address}\n{device_enumerate}",
 		"tooltip-format-enumerate-connected": "{device_alias} - {device_address}",
