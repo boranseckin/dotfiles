@@ -11,6 +11,7 @@ plugins=(
   thefuck
   rust
   fzf
+  eza
   zsh-syntax-highlighting
 )
 
@@ -28,15 +29,11 @@ eval "$(zoxide init zsh)"
 export EDITOR="nvim";
 
 # Aliases
-alias l='eza -la';
-alias ll='eza -l';
-alias la='eza -lA';
-alias lt='eza -lT';
-alias lta='eza -lTA';
-
 alias cat='bat';
-
+alias grep='rg';
 alias vim="nvim";
+alias ssh="kitten ssh";
+
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'";
 alias src="source ~/.zshrc";
 alias nl="npm list --depth=0 2>/dev/null";
