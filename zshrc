@@ -35,6 +35,7 @@ export EDITOR="nvim";
 alias cat='bat';
 alias grep='rg';
 alias vim="nvim";
+alias ssh="kitten ssh";
 
 alias pubkey="cat ~/.ssh/*.pub | wl-copy | echo 'public key copied to pasteboard'";
 alias src="source ~/.zshrc";
