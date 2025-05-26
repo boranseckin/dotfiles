@@ -2,7 +2,7 @@
 set -e
 
 function select_action() {
-  ACTION=$(printf "poweroff\nreboot\nlogout\nclose apps" | wofi --dmenu --prompt power)
+  ACTION=$(printf "poweroff\nreboot\nlogout\nclose apps" | wofi --dmenu --prompt power --cache-file=/dev/null)
 }
 
 function grub() {
