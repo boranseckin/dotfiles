@@ -1,0 +1,12 @@
+diff --git i/lib/directories.zsh w/lib/directories.zsh
+index 8927a56..6cb8446 100644
+--- i/lib/directories.zsh
++++ w/lib/directories.zsh
+@@ -35,6 +35,6 @@ compdef _dirs d
+ 
+ # List directory contents
+ alias lsa='ls -lah'
+-alias l='ls -lah'
++alias l='ls -la'
+ alias ll='ls -lh'
+ alias la='ls -lAh'
