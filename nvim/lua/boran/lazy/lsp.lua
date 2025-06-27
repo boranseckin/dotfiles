@@ -114,13 +114,15 @@ return {
           "bashls",
         },
         automatic_installation = true,
+        automatic_enable = {
+          exclude = { "rust_analyzer" }
+        },
         handlers = {
           function(server)
             lspconfig[server].setup({
               capabilities = lsp_capabilities,
             })
           end,
-          ["rust_analyzer"] = function() end,
         },
       })
 
