@@ -24,7 +24,6 @@ zstyle :omz:plugins:ssh-agent lazy yes
 zstyle :omz:plugins:ssh-agent quiet yes
 
 source $ZSH/oh-my-zsh.sh;
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(zoxide init zsh)"
 
@@ -35,7 +34,6 @@ export EDITOR="nvim";
 alias cat='bat';
 alias grep='rg';
 alias vim="nvim";
-alias ssh="kitten ssh";
 
 alias pubkey="cat ~/.ssh/*.pub | wl-copy | echo 'public key copied to pasteboard'";
 alias src="source ~/.zshrc";
