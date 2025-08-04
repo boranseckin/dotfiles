@@ -13,6 +13,8 @@ plugins=(
   fzf
 )
 
+export PATH="$PATH:/opt/nvim-linux-arm64/bin"
+
 # History
 export HISTORY_IGNORE="l*|ll*|la*|ls*|eza*|cd|vim*|pwd|ps*|man*|kill*|exit|date|* --help";
 setopt HIST_IGNORE_ALL_DUPS;

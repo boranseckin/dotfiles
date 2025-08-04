@@ -1,3 +1,5 @@
+vim.cmd("colorscheme unokai");
+
 vim.opt.nu = true;
 
 vim.opt.swapfile = false;
