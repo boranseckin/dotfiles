@@ -9,6 +9,8 @@
 - ripgrep
 - neovim
 - tldr
+- zoxide
+- rsync
 
 # apps
 - dolphin
