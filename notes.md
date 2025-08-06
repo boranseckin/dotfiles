@@ -1,4 +1,5 @@
 # install
+
 - zsh
 - oh-my-zsh
 - zsh-syntax-highlighting
@@ -11,6 +12,7 @@
 - tldr
 
 # apps
+
 - dolphin
 - grim
 - slurp
@@ -22,11 +24,17 @@
 - greetd
 
 # toolchain
+
 - rustup via pacman
 - python via pacman
 
 # fonts
+
 - noto-fonts
 - noto-fonts-cjk
 - noto-fonts-emoji
 - ttf-jetbrains-mono-nerd
+
+# ntp
+
+- systemd-timesyncd
