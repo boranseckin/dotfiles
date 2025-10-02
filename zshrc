@@ -25,9 +25,6 @@ source $ZSH/oh-my-zsh.sh;
 
 eval "$(zoxide init zsh)"
 
-# Editor
-export EDITOR="nvim";
-
 # Aliases
 alias cat='bat';
 alias grep='rg';
