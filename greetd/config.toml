@@ -18,5 +18,5 @@ command = "agreety --cmd $SHELL"
 user = "greeter"
 
 [initial_session]
-command = "uwsm start -S hyprland-uwsm.desktop"
+command = "uwsm start default"
 user = "boran"
