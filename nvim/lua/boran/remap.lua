@@ -4,10 +4,10 @@ vim.keymap.set("n", "<leader>w", vim.cmd.w);
 vim.keymap.set("n", "<leader> ", "<C-^>")
 
 -- Escape insert mode
-vim.keymap.set("i", "jj", "<ESC>");
-vim.keymap.set("i", "kk", "<ESC>");
-vim.keymap.set("i", "jk", "<ESC>");
-vim.keymap.set("i", "kj", "<ESC>");
+-- vim.keymap.set("i", "jj", "<ESC>");
+-- vim.keymap.set("i", "kk", "<ESC>");
+-- vim.keymap.set("i", "jk", "<ESC>");
+-- vim.keymap.set("i", "kj", "<ESC>");
 
 -- Escape terminal mode
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>");
