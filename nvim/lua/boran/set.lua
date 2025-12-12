@@ -34,6 +34,8 @@ vim.opt.listchars = "trail:·,tab:  ";
 vim.opt.ignorecase = true;
 vim.opt.smartcase = true;
 
+vim.g.noautochdir = true;
+
 vim.g.netrw_keepdir = 0;
 vim.g.netrw_banner = 0;
 
