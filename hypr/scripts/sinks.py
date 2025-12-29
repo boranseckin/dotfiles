@@ -67,7 +67,7 @@ for items in sinks:
 output += "Clear default"
 
 # Call wofi and show the list. take the selected sink name and set it as the default sink
-wofi_command = f"echo '{output}' | wofi --dmenu --hide-scroll --prompt=sinks --allow-markup --cache-file=/dev/null --location=top_right --width=500 --height=200"
+wofi_command = f"echo '{output}' | wofi --dmenu --hide-scroll --prompt=sinks --allow-markup --cache-file=/dev/null --location=top_right --width=600 --height=200"
 wofi_process = subprocess.run(
     wofi_command,
     shell=True,
