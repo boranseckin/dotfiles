@@ -11,6 +11,7 @@ plugins=(
   rust
   eza
   fzf
+  jj
 )
 
 export PATH="$PATH:/opt/nvim-linux-arm64/bin"
