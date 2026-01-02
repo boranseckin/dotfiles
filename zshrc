@@ -11,6 +11,7 @@ plugins=(
   rust
   eza
   fzf
+  jj
 )
 
 # History
