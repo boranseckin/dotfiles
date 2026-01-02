@@ -13,6 +13,7 @@ plugins=(
   fzf
   eza
   zsh-syntax-highlighting
+  jj
 )
 
 # History
