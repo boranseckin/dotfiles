@@ -14,7 +14,7 @@ _vcs_status() {
 
     jj > /dev/null 2>&1 \
       && jj_prompt_template_raw "if(self.empty(), \"%F{green}\", \"%F{magenta}\") ++ $ref ++ \" \"" \
-      || echo -n "$(git_prompt_info)$(_omz_git_prompt_status)"
+      || echo -n "$(_omz_git_prompt_info)"
 
     echo -n "%f"
 }
