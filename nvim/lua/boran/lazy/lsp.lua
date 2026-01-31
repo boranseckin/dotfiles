@@ -17,14 +17,15 @@ return {
     },
     lazy = false,
     keys = {
-      { "K",  "<cmd>lua vim.lsp.buf.hover()<cr>",          desc = "Hover" },
-      { "gd", "<cmd>lua vim.lsp.buf.definition()<cr>",     desc = "Go to definition" },
-      { "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>",    desc = "Go to declaration" },
-      { "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", desc = "Go to implementation" },
-      { "gr", "<cmd>lua vim.lsp.buf.rename()<cr>",         desc = "Rename" },
-      { "ga", "<cmd>lua vim.lsp.buf.code_action()<cr>",    desc = "Show code actions" },
-      { "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>",   desc = "Previous diagnostic" },
-      { "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>",   desc = "Next diagnostic" },
+      { "K",  "<cmd>lua vim.lsp.buf.hover()<cr>",                                            desc = "Hover" },
+      { "gd", "<cmd>lua vim.lsp.buf.definition()<cr>",                                       desc = "Go to definition" },
+      { "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>",                                      desc = "Go to declaration" },
+      { "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>",                                   desc = "Go to implementation" },
+      { "gr", "<cmd>lua vim.lsp.buf.rename()<cr>",                                           desc = "Rename" },
+      { "ga", "<cmd>lua vim.lsp.buf.code_action()<cr>",                                      desc = "Show code actions" },
+      { "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>",                                     desc = "Previous diagnostic" },
+      { "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>",                                     desc = "Next diagnostic" },
+      { "gI", "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>", desc = "Toggle inlay hints" },
     },
     config = function()
       local cmp = require("cmp")
