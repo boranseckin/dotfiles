@@ -2,3 +2,8 @@
 .env
 .vscode/*
 *.log
+
+.claude
+CLAUDE.md
+SESSION.md
+todo.md
