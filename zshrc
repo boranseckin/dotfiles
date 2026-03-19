@@ -32,7 +32,7 @@ alias grep='rg';
 alias vim="nvim";
 alias ssh="kitten ssh";
 
-alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'";
+alias pubkey="more ~/.ssh/id_ed25519.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'";
 alias src="source ~/.zshrc";
 alias nl="npm list --depth=0 2>/dev/null";
 alias nlg="npm list -g --depth=0 2>/dev/null";
