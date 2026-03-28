@@ -12,7 +12,11 @@ return {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-cmdline",
       "L3MON4D3/LuaSnip",
-      "mrcjkb/rustaceanvim",
+      {
+        "mrcjkb/rustaceanvim",
+        version = '^8',
+        lazy = false,
+      },
       "mfussenegger/nvim-dap",
     },
     lazy = false,
