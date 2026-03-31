@@ -38,7 +38,7 @@ alias grep='rg';
 alias vim="nvim";
 alias ssh="kitten ssh";
 
-alias pubkey="cat ~/.ssh/*.pub | wl-copy | echo 'public key copied to pasteboard'";
+alias pubkey="cat ~/.ssh/*.pub | wl-copy && echo 'public key copied to pasteboard'";
 alias src="source ~/.zshrc";
 alias cpv="rsync -ahP";
 alias changes="git logs | awk '/^ [0-9]/ { f += \$1; i += \$4; d += \$6 } END { printf(\"%d files changed, %d insertions(+), %d deletions(-)\n\", f, i, d) }'";
