@@ -22,7 +22,7 @@ return {
       { "<leader>fa", "<cmd>Telescope lsp_workspace_symbols<cr>", desc = "Find workspace symbols" },
       { "<leader>fs", "<cmd>Telescope lsp_document_symbols<cr>",  desc = "Find document symbols" },
       { "<leader>fb", "<cmd>Telescope buffers<cr>",               desc = "Find buffers" },
-      { "<leader>gf", "<cmdTelescope git_files<cr>",              desc = "Find git files" },
+      { "<leader>gf", "<cmd>Telescope git_files<cr>",             desc = "Find git files" },
       { "<leader>gc", "<cmd>Telescope git_commits<cr>",           desc = "Find git commits" },
       { "<leader>gb", "<cmd>Telescope git_bcommits<cr>",          desc = "Find buffer git commits" },
       { "<leader>gs", "<cmd>Telescope git_status<cr>",            desc = "Find git status" },
