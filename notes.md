@@ -38,3 +38,10 @@
 # ntp
 
 - systemd-timesyncd
+
+# systemd enable
+
+- hyprpaper
+- hyprpolkitagent
+- waybar
+- ghostmirror
