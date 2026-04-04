@@ -55,7 +55,7 @@ def parse_wpctl_status():
     return sinks_dict
 
 
-# get the list of sinks ready to put into wofi - highlight the current default sink
+# get the list of sinks ready to put into rofi - highlight the current default sink
 output = ""
 sinks = parse_wpctl_status()
 for items in sinks:
@@ -66,20 +66,20 @@ for items in sinks:
 
 output += "Clear default"
 
-# Call wofi and show the list. take the selected sink name and set it as the default sink
-wofi_command = f"echo '{output}' | wofi --dmenu --hide-scroll --prompt=sinks --allow-markup --cache-file=/dev/null --location=top_right --width=600 --height=200"
-wofi_process = subprocess.run(
-    wofi_command,
+# Call rofi and show the list. take the selected sink name and set it as the default sink
+rofi_command = f"echo '{output}' | rofi -dmenu -p sinks"
+rofi_process = subprocess.run(
+    rofi_command,
     shell=True,
     encoding="utf-8",
     stdout=subprocess.PIPE,
     stderr=subprocess.PIPE,
 )
 
-if wofi_process.returncode != 0:
+if rofi_process.returncode != 0:
     exit(0)
 
-selected_sink_name = wofi_process.stdout.strip()
+selected_sink_name = rofi_process.stdout.strip()
 
 if selected_sink_name == "Clear default":
     subprocess.run("wpctl clear-default", shell=True)

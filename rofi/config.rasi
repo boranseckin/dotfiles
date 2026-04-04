@@ -1,0 +1,14 @@
+configuration {
+  modes: "drun,calc";
+	font: "Noto Sans 14";
+	show-icons: true;
+  run-command: "uwsm app -- {cmd}";
+	drun-display-format: "{name}";
+  calc {
+    automatic-save-to-history: true;
+    hint-result: "";
+    calc-command: "echo -n '{result}' | wl-copy";
+  }
+}
+
+@theme "~/.config/rofi/theme.rasi"

@@ -22,6 +22,7 @@
 - vlc
 - logiops
 - greetd
+- rofi
 
 # toolchain
 

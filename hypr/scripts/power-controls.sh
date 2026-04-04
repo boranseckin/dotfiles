@@ -2,11 +2,11 @@
 set -e
 
 function select_action() {
-  ACTION=$(printf "poweroff\nreboot\nlogout\nclose apps" | wofi --dmenu --prompt power --cache-file=/dev/null)
+  ACTION=$(printf "poweroff\nreboot\nlogout\nclose apps" | rofi -dmenu -p power)
 }
 
 function grub() {
-  SELECTION=$(cat /boot/grub/grub.cfg | grep "^menuentry" | awk -F\' '{print $2}' | wofi --dmenu --prompt grub --sort-order alphabetical)
+  SELECTION=$(cat /boot/grub/grub.cfg | grep "^menuentry" | awk -F\' '{print $2}' | rofi -dmenu -p grub -sort)
   notify-send "power controls" "$SELECTION is selected for next boot"
   sudo grub-reboot "$SELECTION"
   sleep 2

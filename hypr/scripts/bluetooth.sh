@@ -1,16 +1,5 @@
 #!/bin/bash
 
-WOFI_CMD="wofi \
-  --dmenu \
-  --hide-scroll \
-  --prompt Bluetooth \
-  --insensitive \
-  --allow-markup \
-  --cache-file=/dev/null \
-  --location=top_right \
-  --width=600 \
-  --height=200"
-
 get_power_status() {
   if bluetoothctl show | grep -q "Powered: yes"; then
     echo "On"
@@ -51,7 +40,7 @@ fi
 OPTIONS="$POWER_OPT\n$SCAN_OPT\nDevices"
 
 # Show Main Menu
-SELECTED=$(echo -e "$OPTIONS" | $WOFI_CMD)
+SELECTED=$(echo -e "$OPTIONS" | rofi -dmenu -p bluetooth)
 
 case "$SELECTED" in
 "Power: Turn On")
@@ -78,14 +67,14 @@ case "$SELECTED" in
     exit 0
   fi
 
-  SELECTED_DEVICE=$(echo "$DEVICES" | $WOFI_CMD --prompt "Select Device")
+  SELECTED_DEVICE=$(echo "$DEVICES" | rofi -dmenu -p "Select Device")
 
   MAC=$(echo "$SELECTED_DEVICE" | awk '{print $1}')
   NAME=$(echo "$SELECTED_DEVICE" | cut -d ' ' -f 2-)
 
   if [ -n "$MAC" ]; then
     ACTIONS="Connect\nDisconnect\nPair\nRemove\nInfo"
-    ACTION=$(echo -e "$ACTIONS" | $WOFI_CMD --prompt "$NAME")
+    ACTION=$(echo -e "$ACTIONS" | rofi -dmenu -p "$NAME")
 
     case "$ACTION" in
     "Connect")

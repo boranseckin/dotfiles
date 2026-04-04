@@ -1,0 +1,116 @@
+/* Global defaults applied to every widget. Defines the color palette as named
+   variables (@bg, @fg, etc.) and sets default background-color, text-color,
+   and border-color so each widget only overrides what it needs. */
+* {
+    bg:     #282C34ff;
+    bg-alt: #383C4Aff;
+    bg-in:  #3B4252ff;
+    bg-ev:  #404552ff;
+    bg-sel: #4C566Aff;
+    fg:     #FFFFFFff;
+
+    background-color: transparent;
+    text-color:       @fg;
+    border-color:     transparent;
+}
+
+/* Outermost popup box. Fixed size so switching between modes doesn't resize
+   the window. */
+window {
+    background-color: @bg;
+    width:            1000px;
+    height:           306px;
+    padding:          3px;
+    border-radius:    10px;
+}
+
+/* Invisible layout container inside the window. children controls the
+   vertical stacking order: input bar on top, then the calc result bar,
+   then the results list. */
+mainbox {
+    background-color: transparent;
+    children:         [inputbar, message, listview];
+    spacing:          0px;
+}
+
+/* Realtime calc result bar (e.g. "= 1.414..."). Rofi-calc writes into this
+   widget as you type. Also used for error messages from any mode. */
+message {
+    background-color: @bg-alt;
+    margin:           0px 5px;
+    padding:          4px 8px;
+    min-height:       30px;
+}
+
+/* Text widget rendered inside message. Styled separately because message is
+   the container but textbox is what actually draws the characters. */
+textbox {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+/* Row containing the prompt label and the text field. children lays them out
+   horizontally. */
+inputbar {
+    background-color: @bg-in;
+    margin:           5px;
+    padding:          6px 8px;
+    children:         [prompt, entry];
+}
+
+/* Mode label to the left of the cursor (e.g. "drun", "calc"). Right padding
+   adds a gap between it and the text field. */
+prompt {
+    background-color: transparent;
+    padding:          0px 6px 0px 0px;
+}
+
+/* Text field where you type. Empty placeholder suppresses the default hint. */
+entry {
+    background-color: transparent;
+    placeholder:      "";
+}
+
+/* Scrollable results area. lines fixes it to 6 visible rows at all times. */
+listview {
+    background-color: @bg-alt;
+    margin:           5px;
+    padding:          0px;
+    lines:            6;
+    scrollbar:        false;
+}
+
+/* One row in the results list. */
+element {
+    padding: 4px 8px;
+}
+
+/* Unselected row on an odd position. */
+element normal normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+/* Unselected row on an even position. bg-ev gives the subtle alternating stripe. */
+element alternate normal {
+    background-color: @bg-ev;
+    text-color:       @fg;
+}
+
+/* Currently highlighted row. */
+element selected normal {
+    background-color: @bg-sel;
+    text-color:       @fg;
+}
+
+/* App icon inside a row. Right padding adds breathing room between icon and name. */
+element-icon {
+    size:             24px;
+    background-color: transparent;
+    padding:          0px 6px 0px 0px;
+}
+
+/* Label text inside a row. Transparent so the parent element background shows through. */
+element-text {
+    background-color: transparent;
+}
