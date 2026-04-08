@@ -21,15 +21,14 @@ cmp.setup({
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
   },
+  view = {
+    entries = { selection_order = 'near_cursor' }
+  },
   mapping = cmp.mapping.preset.insert({
-    ["<CR>"]    = cmp.mapping.confirm({ select = false }),
-    ["<Down>"]  = cmp.mapping.select_next_item({ behavior = "select" }),
-    ["<Up>"]    = cmp.mapping.select_prev_item({ behavior = "select" }),
-    ["<Tab>"]   = cmp.mapping.select_next_item({ behavior = "select" }),
-    ["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = "select" }),
-    ["<C-u>"]   = cmp.mapping.scroll_docs(-4),
-    ["<C-d>"]   = cmp.mapping.scroll_docs(4),
-    ["<C-e>"]   = cmp.mapping(function()
+    ["<CR>"]  = cmp.mapping.confirm({ select = false }),
+    ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+    ["<C-d>"] = cmp.mapping.scroll_docs(4),
+    ["<C-e>"] = cmp.mapping(function()
       if cmp.visible() then cmp.abort() else cmp.complete() end
     end, { "i" }),
   }),
