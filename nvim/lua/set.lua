@@ -34,7 +34,10 @@ vim.opt.listchars = "trail:·,tab:  ";
 vim.opt.ignorecase = true;
 vim.opt.smartcase = true;
 
-vim.o.winborder = 'single'
+vim.opt.completeopt = "menu,menuone,noselect,popup";
+
+vim.opt.pumborder = "single";
+vim.o.winborder = "single";
 
 vim.g.noautochdir = true;
 
