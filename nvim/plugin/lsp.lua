@@ -39,9 +39,14 @@ vim.keymap.set("n", "]d", function()
   })
 end, { desc = "Next diagnostic" })
 
-vim.keymap.set("n", "gI", function()
+vim.keymap.set("n", "<leader>ih", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end, { desc = "Toggle inlay hints" })
+
+vim.keymap.set("n", "<leader>td", function()
+  local current_config = vim.diagnostic.config().virtual_text
+  vim.diagnostic.config({ virtual_text = not current_config })
+end, { desc = "Toggle inline diagnostics" })
 
 -- auto format
 vim.api.nvim_create_autocmd("BufWritePre", {
