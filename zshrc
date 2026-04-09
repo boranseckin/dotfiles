@@ -1,57 +1,47 @@
-export ZSH="/Users/boran/.oh-my-zsh";
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="custom"
-ZSH_DISABLE_COMPFIX="true"
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+ZSH_COMPDUMP="$ZSH/cache/.zcompdump"
 
 plugins=(
+  sudo
   extract
   macos
-  thefuck
-  rust
-  fzf
+  ssh-agent
   eza
-  zsh-syntax-highlighting
+  fzf
   jj
+  zoxide
+  zsh-syntax-highlighting
 )
 
-# History
-export HISTORY_IGNORE="l*|ll*|la*|ls*|eza*|cd|vim*|pwd|ps*|man*|kill*|exit|date|* --help";
-setopt HIST_IGNORE_ALL_DUPS;
-setopt HIST_FIND_NO_DUPS;
-setopt HIST_REDUCE_BLANKS;
+export HISTORY_IGNORE="l*|ll*|la*|ls*|eza*|cd|z|z *|vim*|pwd|ps*|man*|tldr*|tldx*|which*|printenv*|kill*|exit|date|* --help|jj"
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt INC_APPEND_HISTORY
+setopt NO_BEEP
 
-source $ZSH/oh-my-zsh.sh;
+zstyle :omz:plugins:eza dirs-first yes
+zstyle :omz:plugins:ssh-agent lazy yes
+zstyle :omz:plugins:ssh-agent quiet yes
 
-eval "$(zoxide init zsh)"
+source $ZSH/oh-my-zsh.sh
 
-# Aliases
+export EDITOR="nvim"
+
 alias cat='bat';
 alias grep='rg';
 alias vim="nvim";
 alias ssh="kitten ssh";
 
-alias pubkey="more ~/.ssh/id_ed25519.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'";
-alias src="source ~/.zshrc";
-alias nl="npm list --depth=0 2>/dev/null";
-alias nlg="npm list -g --depth=0 2>/dev/null";
-alias cpv="rsync -ahP";
-alias changes="git logs | awk '/^ [0-9]/ { f += \$1; i += \$4; d += \$6 } END { printf(\"%d files changed, %d insertions(+), %d deletions(-)\n\", f, i, d) }'";
-alias diff="git diff --name-only --relative --diff-filter=d | xargs bat --diff";
-
 alias myip="curl icanhazip.com";
 alias myip4="curl -4 icanhazip.com";
 alias myip6="curl -6 icanhazip.com";
 
-# Editor
-export EDITOR="nvim";
-
 # GPG
 export GPG_TTY=$(tty);
-
-# Docker
-export DOCKER_SCAN_SUGGEST=false;
 
 # Homebrew
 export HOMEBREW_NO_ENV_HINTS=true;
@@ -77,6 +67,3 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1;
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-# pico
-export PICO_SDK_PATH="$HOME/.pico-sdk/sdk/2.0.0"
