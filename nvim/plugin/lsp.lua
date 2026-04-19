@@ -43,7 +43,7 @@ vim.keymap.set("n", "<leader>ih", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end, { desc = "Toggle inlay hints" })
 
-vim.keymap.set("n", "<leader>td", function()
+vim.keymap.set("n", "<leader>id", function()
   local current_config = vim.diagnostic.config().virtual_text
   vim.diagnostic.config({ virtual_text = not current_config })
 end, { desc = "Toggle inline diagnostics" })
