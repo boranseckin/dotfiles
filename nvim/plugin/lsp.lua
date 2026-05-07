@@ -8,6 +8,15 @@ vim.lsp.config('*', {
   capabilities = require("cmp_nvim_lsp").default_capabilities(),
 })
 
+-- rust-analyzer clippy instead of check
+vim.lsp.config('rust_analyzer', {
+  settings = {
+    ['rust-analyzer'] = {
+      check = { command = 'clippy' },
+    }
+  },
+})
+
 vim.lsp.enable({
   'lua_ls',
   'rust_analyzer',
