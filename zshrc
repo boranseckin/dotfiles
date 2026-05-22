@@ -12,7 +12,6 @@ plugins=(
   fzf
   jj
   zoxide
-  zsh-syntax-highlighting
 )
 
 export HISTORY_IGNORE="l*|ll*|la*|ls*|eza*|cd|z|z *|vim*|pwd|ps*|man*|tldr*|tldx*|which*|printenv*|kill*|exit|date|* --help|jj"
@@ -67,3 +66,6 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1;
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# zsh-syntax-highlighting
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
