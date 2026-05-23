@@ -1,2 +1,9 @@
 # move to /etc/udev/rules.d/
-ACTION=="add", KERNEL=="hidraw9", RUN+="/usr/bin/systemctl --no-block restart logid.service"
+#
+# Restart logid when any Bluetooth Logitech device connects so that remappings take effect.
+# Matches on ACTION=bind rather than add so the rule fires after the logitech-hidpp-device driver
+# has fully initialized the device.
+#
+# HID_ID format: <bus>:<vendor>:<product>
+# bus 0005 = Bluetooth, vendor 0000046D = Logitech.
+ACTION=="bind", SUBSYSTEM=="hid", ENV{HID_ID}=="0005:0000046D:0000B034", RUN+="/usr/bin/systemctl --no-block restart logid.service"
