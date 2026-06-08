@@ -265,7 +265,7 @@ hl.window_rule({
 
 -- Steam / games: tag windows
 local gameClasses = {
-  "^steam_app_%d+$",
+  "^steam_app.*",
   "gamescope",
   "tf_linux64",
   "hl2_linux",
