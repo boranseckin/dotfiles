@@ -2,7 +2,7 @@
 set -e
 
 function select_action() {
-  ACTION=$(printf "poweroff\nreboot\nlogout\nclose apps" | rofi -dmenu -p power)
+  ACTION=$(printf "poweroff\nreboot\nlogout\nclose" | rofi -dmenu -p power)
 }
 
 function grub() {
@@ -15,8 +15,10 @@ function grub() {
 function close_apps() {
   notify-send "power controls" "closing applications"
 
-  HYPRCMDS=$(hyprctl -j clients | jq -j '.[] | "dispatch closewindow address:\(.address); "')
-  hyprctl --batch "$HYPRCMDS" >>/tmp/power-controls.logs 2>&1
+  windows=$(hyprctl clients -j | jq -r '.[] | .address')
+  for win in $windows; do
+    hyprctl dispatch "hl.dsp.window.close({ window = 'address:$win' })"
+  done
 
   if pgrep steam >/dev/null; then
     echo "shutting down steam" >>/tmp/power-controls.logs
