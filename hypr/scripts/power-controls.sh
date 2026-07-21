@@ -53,7 +53,7 @@ reboot)
   ;;
 logout)
   close_apps
-  hyprctl dispatch exit
+  hyprctl dispatch "hl.dsp.exit()"
   ;;
 grub)
   grub
