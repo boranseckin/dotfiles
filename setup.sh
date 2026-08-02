@@ -12,7 +12,6 @@ link custom.zsh-theme "$ZSH"/custom/themes/custom.zsh-theme
 link zshrc "$HOME"/.zshrc
 link fontconfig "$XDG_CONFIG_HOME"/fontconfig
 link hypr "$XDG_CONFIG_HOME"/hypr
-link waybar "$XDG_CONFIG_HOME"/waybar
 link quickshell "$XDG_CONFIG_HOME"/quickshell
 link rofi "$XDG_CONFIG_HOME"/rofi
 link kitty "$XDG_CONFIG_HOME"/kitty
