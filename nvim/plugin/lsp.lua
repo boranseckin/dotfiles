@@ -17,11 +17,17 @@ vim.lsp.config('rust_analyzer', {
   },
 })
 
+-- qmlls isn't on PATH; it ships inside the qt6-declarative package
+vim.lsp.config('qmlls', {
+  cmd = { '/usr/lib/qt6/bin/qmlls' },
+})
+
 vim.lsp.enable({
   'lua_ls',
   'rust_analyzer',
   'clangd',
   'bashls',
+  'qmlls',
 })
 
 -- keybinds

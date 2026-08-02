@@ -23,6 +23,7 @@
 - logiops
 - greetd
 - rofi
+- quickshell
 
 # toolchain
 
@@ -44,5 +45,3 @@
 
 - hyprpaper
 - hyprpolkitagent
-- waybar
-- ghostmirror

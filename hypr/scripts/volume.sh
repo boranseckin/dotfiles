@@ -14,9 +14,9 @@ case "$volume" in
 *1.*) volume="${volume##* }" && volume="${volume//./}" ;;
 esac
 
-notify-send \
-  -h int:value:$volume \
-  -h string:x-canonical-private-synchronous:volume_notif \
-  -u low \
-  -t 2000 \
-  "${mute}${volume}"
+# notify-send \
+#   -h int:value:$volume \
+#   -h string:x-canonical-private-synchronous:volume_notif \
+#   -u low \
+#   -t 2000 \
+#   "${mute}${volume}"
