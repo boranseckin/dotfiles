@@ -130,6 +130,7 @@ PanelWindow {
 
         Bar.ClockIndicator {
           Layout.alignment: Qt.AlignVCenter
+          screen: root.modelData
         }
 
         Bar.PowerButton {

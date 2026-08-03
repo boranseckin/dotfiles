@@ -33,4 +33,15 @@ ShellRoot {
       }
     }
   }
+
+  Variants {
+    model: Quickshell.screens
+
+    delegate: Component {
+      Modules.Calendar {
+        required property var modelData
+        targetScreen: modelData
+      }
+    }
+  }
 }

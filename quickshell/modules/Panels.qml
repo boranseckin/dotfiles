@@ -2,7 +2,7 @@ pragma Singleton
 import QtQuick
 
 QtObject {
-  // Which flyout is open: "" | "quicksettings" | "notifications"
+  // Which flyout is open: "" | "quicksettings" | "notifications" | "calendar"
   property string open: ""
   // Active tab inside the quick settings flyout: "volume" | "network" | "bluetooth"
   property string quickSettingsTab: "volume"
@@ -25,6 +25,15 @@ QtObject {
     } else {
       activeScreen = screen;
       open = "notifications";
+    }
+  }
+
+  function toggleCalendar(screen) {
+    if (open === "calendar") {
+      open = "";
+    } else {
+      activeScreen = screen;
+      open = "calendar";
     }
   }
 

@@ -4,6 +4,8 @@ import "../../modules" as Modules
 
 Rectangle {
   id: root
+  required property var screen
+
   implicitWidth: label.implicitWidth + 16
   implicitHeight: 22
   radius: Modules.Colors.radius
@@ -25,5 +27,11 @@ Rectangle {
     font.family: Modules.Colors.fontFamily
     font.pixelSize: Modules.Colors.fontSize
     color: Modules.Colors.bg
+  }
+
+  MouseArea {
+    anchors.fill: parent
+    cursorShape: Qt.PointingHandCursor
+    onClicked: Modules.Panels.toggleCalendar(root.screen)
   }
 }
