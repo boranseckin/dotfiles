@@ -275,6 +275,7 @@ local gameClasses = {
   ".*Silksong",
   "Slay.the.Spire.*",
   "Dome.Keeper",
+  "ck3",
 }
 
 -- Title-based game tag
