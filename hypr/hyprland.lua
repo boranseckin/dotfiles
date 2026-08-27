@@ -316,3 +316,10 @@ hl.window_rule({
   float = true,
   pin   = true,
 })
+
+-- Screen Shot
+hl.window_rule({
+  name  = "ss-float",
+  match = { title = "^satty$" },
+  float = true,
+})
