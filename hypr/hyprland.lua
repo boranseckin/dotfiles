@@ -231,7 +231,7 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl -p spotify play-pause"), { l
 -- Screenshot
 hl.bind("Print",
   hl.dsp.exec_cmd(
-    'grim -g "$(slurp -d)" - | satty --filename - --output-filename ~/Pictures/ss-$(date \'+%Y%m%d-%H:%M:%S\').png'))
+    'grim -g "$(slurp -d)" - | satty --filename - --output-filename ~/Pictures/ss-$(date \'+%Y%m%d-%H:%M:%S\').png --copy-command wl-copy'))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
