@@ -22,3 +22,4 @@ link logiops "$XDG_CONFIG_HOME"/logiops
 link dunst "$XDG_CONFIG_HOME"/dunst
 link obsidian/user-flags.conf "$XDG_CONFIG_HOME"/obsidian/user-flags.conf
 link pipewire "$XDG_CONFIG_HOME"/pipewire
+link wayvnc "$XDG_CONFIG_HOME"/wayvnc

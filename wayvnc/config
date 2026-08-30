@@ -1,0 +1,9 @@
+# tailscale ip -4
+address=100.121.163.34
+port=5900
+enable_auth=true
+password=vnc
+relax_encryption=true
+allow_broken_crypto=true
+# openssl genrsa -traditional -out ~/.config/wayvnc/rsa_key.pem 2048
+rsa_private_key_file=/home/boran/.config/wayvnc/rsa_key.pem
